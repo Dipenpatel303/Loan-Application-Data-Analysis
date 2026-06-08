@@ -24,7 +24,7 @@ This dashboard helps answer key business questions:
 
 ## 📈 Dashboard Preview
 
-![Loan Applications Dashboard](dashboard.png)
+![Loan Applications Dashboard](https://github.com/Dipenpatel303/Loan-Application-Data-Analysis/blob/main/Loan%20Application%20Approval%20Dashboard.png)
 
 ---
 
