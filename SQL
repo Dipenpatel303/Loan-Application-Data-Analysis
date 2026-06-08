@@ -1,0 +1,32 @@
+## 🧮 SQL Analysis Performed
+
+### KPI Calculation
+
+```sql
+SELECT
+COUNT(*) AS Total_Applications,
+AVG(Loan_Amount) AS Avg_Loan_Amount,
+SUM(CASE WHEN Loan_Status='Approved' THEN 1 ELSE 0 END) AS Approved_Applications
+FROM Loan_Data;
+```
+
+### Risk Categorization
+
+```sql
+CASE
+    WHEN Credit_Score < 500 THEN 'High Risk'
+    WHEN Credit_Score BETWEEN 500 AND 649 THEN 'Medium Risk'
+    ELSE 'Low Risk'
+END AS Risk_Category
+```
+
+### Approval Rate Calculation
+
+```sql
+SELECT
+ROUND(
+100.0 * SUM(CASE WHEN Loan_Status='Approved' THEN 1 ELSE 0 END)
+/ COUNT(*),2
+) AS Approval_Rate
+FROM Loan_Data;
+```
